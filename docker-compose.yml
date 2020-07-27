@@ -9,8 +9,8 @@ services:
     environment:
       COMPOSE_PROJECT_NAME: ${COMPOSE_PROJECT_NAME}
     networks:
-      - public
       - default
+      - public
     volumes:
       - ${PWD}/app:/app
 
@@ -30,5 +30,3 @@ networks:
   public:
     external:
       name: custom_net
-  default:
-    external: false
